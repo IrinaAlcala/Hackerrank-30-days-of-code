@@ -1,0 +1,13 @@
+const queue = [root];
+const result = [];
+
+while (queue.length) {
+    let treeNode = queue.shift();
+
+    result.push(treeNode.data);
+
+    treeNode.left && queue.push(treeNode.left);
+    treeNode.right && queue.push(treeNode.right);
+}
+
+console.log(result.join(' '));
